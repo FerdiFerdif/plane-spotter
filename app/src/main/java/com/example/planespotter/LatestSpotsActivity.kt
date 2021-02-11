@@ -250,7 +250,7 @@ class LatestSpotsActivity  : AppCompatActivity() {
                     Picasso.get().load(image_url3).into(image_view_spot3)
 
                 } else {
-                    Log.d("no exist", "Second spot doesn't exist ")
+                    Log.d("no exist", "Third spot doesn't exist ")
                 }
             }
             .addOnFailureListener { exception ->
@@ -272,7 +272,7 @@ class LatestSpotsActivity  : AppCompatActivity() {
                     Picasso.get().load(image_url4).into(image_view_spot4)
 
                 } else {
-                    Log.d("no exist", "Second spot doesn't exist ")
+                    Log.d("no exist", "Fourth spot doesn't exist ")
                 }
             }
             .addOnFailureListener { exception ->
@@ -294,7 +294,7 @@ class LatestSpotsActivity  : AppCompatActivity() {
                     Picasso.get().load(image_url5).into(image_view_spot5)
 
                 } else {
-                    Log.d("no exist", "Second spot doesn't exist ")
+                    Log.d("no exist", "Fifth spot doesn't exist ")
                 }
             }
             .addOnFailureListener { exception ->
