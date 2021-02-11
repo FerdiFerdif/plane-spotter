@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="2116dp"
+        tools:context=".LatestSpotsActivity">
+
+        <TextView
+            android:id="@+id/title_latest_spots"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:text="MY SPOTS"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/clear_spot"
+            app:layout_constraintEnd_toStartOf="@+id/title_latest_spots"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/clear_spot"
+            android:layout_width="63dp"
+            android:layout_height="58dp"
+            android:background="#00A1E4"
+            android:layout_marginLeft="31dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="Clear spot I."
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_latest_spots" />
+
+        <Button
+            android:id="@+id/clear_spot2"
+            android:layout_width="63dp"
+            android:layout_height="58dp"
+            android:background="#00A1E4"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:text="Clear spot II."
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/clear_spot"
+            app:layout_constraintTop_toBottomOf="@+id/title_latest_spots" />
+
+        <Button
+            android:id="@+id/clear_spot3"
+            android:layout_width="63dp"
+            android:layout_height="58dp"
+            android:background="#00A1E4"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:text="Clear spot III."
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/clear_spot2"
+            app:layout_constraintTop_toBottomOf="@+id/title_latest_spots" />
+
+        <Button
+            android:id="@+id/clear_spot4"
+            android:layout_width="63dp"
+            android:layout_height="58dp"
+            android:background="#00A1E4"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:text="Clear spot IV."
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/clear_spot3"
+            app:layout_constraintTop_toBottomOf="@+id/title_latest_spots" />
+
+        <Button
+            android:id="@+id/clear_spot5"
+            android:layout_width="63dp"
+            android:layout_height="58dp"
+            android:background="#00A1E4"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:text="Clear spot V."
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/clear_spot4"
+            app:layout_constraintTop_toBottomOf="@+id/title_latest_spots" />
+
+        <TextView
+            android:id="@+id/spot1"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="SPOT I."
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clear_spot" />
+
+        <TextView
+            android:id="@+id/results_date1"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_date"
+            app:layout_constraintTop_toBottomOf="@+id/spot1" />
+
+        <TextView
+            android:id="@+id/this_is_the_date"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="Date and Time:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spot1" />
+
+        <TextView
+            android:id="@+id/results_planeType1"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_planeType"
+            app:layout_constraintTop_toBottomOf="@+id/results_date1" />
+
+        <TextView
+            android:id="@+id/this_is_the_planeType"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Planetype: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_date" />
+
+        <TextView
+            android:id="@+id/results_locationName1"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_locationName"
+            app:layout_constraintTop_toBottomOf="@+id/results_planeType1" />
+
+        <TextView
+            android:id="@+id/this_is_the_locationName"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Location Name: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_planeType" />
+
+        <TextView
+            android:id="@+id/results_locationGPS1"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_locationGPS"
+            app:layout_constraintTop_toBottomOf="@+id/results_locationName1" />
+
+        <TextView
+            android:id="@+id/this_is_the_locationGPS"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Location GPS: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_locationName" />
+
+        <TextView
+            android:id="@+id/results_destinationArrival1"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_destinationArrival"
+            app:layout_constraintTop_toBottomOf="@+id/results_locationGPS1" />
+
+        <TextView
+            android:id="@+id/this_is_the_destinationArrival"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Destination Arrival: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_locationGPS" />
+
+        <TextView
+            android:id="@+id/results_destinationTakeoff1"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_destinationTakeoff"
+            app:layout_constraintTop_toBottomOf="@+id/results_destinationArrival1" />
+
+        <TextView
+            android:id="@+id/this_is_the_destinationTakeoff"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Destination Takeoff: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_destinationArrival" />
+
+        <ImageView
+            android:id="@+id/image_view_spot1"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/results_destinationTakeoff1" />
+
+        <TextView
+            android:id="@+id/spot2"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="SPOT II."
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_spot1" />
+
+        <TextView
+            android:id="@+id/results_date2"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_date"
+            app:layout_constraintTop_toBottomOf="@+id/spot2" />
+
+        <TextView
+            android:id="@+id/this_is_the_date2"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="Date and Time:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spot2" />
+
+        <TextView
+            android:id="@+id/results_planeType2"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_planeType"
+            app:layout_constraintTop_toBottomOf="@+id/results_date2" />
+
+        <TextView
+            android:id="@+id/this_is_the_planeType2"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Planetype: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_date2" />
+
+        <TextView
+            android:id="@+id/results_locationName2"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_locationName"
+            app:layout_constraintTop_toBottomOf="@+id/results_planeType2" />
+
+        <TextView
+            android:id="@+id/this_is_the_locationName2"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Location Name: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_planeType2" />
+
+        <TextView
+            android:id="@+id/results_locationGPS2"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_locationGPS"
+            app:layout_constraintTop_toBottomOf="@+id/results_locationName2" />
+
+        <TextView
+            android:id="@+id/this_is_the_locationGPS2"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Location GPS: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_locationName2" />
+
+        <TextView
+            android:id="@+id/results_destinationArrival2"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_destinationArrival"
+            app:layout_constraintTop_toBottomOf="@+id/results_locationGPS2" />
+
+        <TextView
+            android:id="@+id/this_is_the_destinationArrival2"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Destination Arrival: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_locationGPS2" />
+
+        <TextView
+            android:id="@+id/results_destinationTakeoff2"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_destinationTakeoff"
+            app:layout_constraintTop_toBottomOf="@+id/results_destinationArrival2" />
+
+        <TextView
+            android:id="@+id/this_is_the_destinationTakeoff2"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Destination Takeoff: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_destinationArrival2" />
+
+        <ImageView
+            android:id="@+id/image_view_spot2"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/results_destinationTakeoff2" />
+
+        <TextView
+            android:id="@+id/spot3"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="SPOT III."
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_spot2" />
+
+        <TextView
+            android:id="@+id/results_date3"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_date"
+            app:layout_constraintTop_toBottomOf="@+id/spot3" />
+
+        <TextView
+            android:id="@+id/this_is_the_date3"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="Date and Time:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spot3" />
+
+        <TextView
+            android:id="@+id/results_planeType3"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_planeType"
+            app:layout_constraintTop_toBottomOf="@+id/results_date3" />
+
+        <TextView
+            android:id="@+id/this_is_the_planeType3"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Planetype: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_date3" />
+
+        <TextView
+            android:id="@+id/results_locationName3"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_locationName"
+            app:layout_constraintTop_toBottomOf="@+id/results_planeType3" />
+
+        <TextView
+            android:id="@+id/this_is_the_locationName3"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Location Name: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_planeType3" />
+
+        <TextView
+            android:id="@+id/results_locationGPS3"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_locationGPS"
+            app:layout_constraintTop_toBottomOf="@+id/results_locationName3" />
+
+        <TextView
+            android:id="@+id/this_is_the_locationGPS3"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Location GPS: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_locationName3" />
+
+        <TextView
+            android:id="@+id/results_destinationArrival3"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_destinationArrival"
+            app:layout_constraintTop_toBottomOf="@+id/results_locationGPS3" />
+
+        <TextView
+            android:id="@+id/this_is_the_destinationArrival3"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Destination Arrival: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_locationGPS3" />
+
+        <TextView
+            android:id="@+id/results_destinationTakeoff3"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_destinationTakeoff"
+            app:layout_constraintTop_toBottomOf="@+id/results_destinationArrival3" />
+
+        <TextView
+            android:id="@+id/this_is_the_destinationTakeoff3"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Destination Takeoff: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_destinationArrival3" />
+
+        <ImageView
+            android:id="@+id/image_view_spot3"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/results_destinationTakeoff3" />
+
+        <TextView
+            android:id="@+id/spot4"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="SPOT IV."
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_spot3" />
+
+        <TextView
+            android:id="@+id/results_date4"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_date"
+            app:layout_constraintTop_toBottomOf="@+id/spot4" />
+
+        <TextView
+            android:id="@+id/this_is_the_date4"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="Date and Time:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spot4" />
+
+        <TextView
+            android:id="@+id/results_planeType4"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_planeType"
+            app:layout_constraintTop_toBottomOf="@+id/results_date4" />
+
+        <TextView
+            android:id="@+id/this_is_the_planeType4"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Planetype: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_date4" />
+
+        <TextView
+            android:id="@+id/results_locationName4"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_locationName"
+            app:layout_constraintTop_toBottomOf="@+id/results_planeType4" />
+
+        <TextView
+            android:id="@+id/this_is_the_locationName4"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Location Name: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_planeType4" />
+
+        <TextView
+            android:id="@+id/results_locationGPS4"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_locationGPS"
+            app:layout_constraintTop_toBottomOf="@+id/results_locationName4" />
+
+        <TextView
+            android:id="@+id/this_is_the_locationGPS4"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Location GPS: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_locationName4" />
+
+        <TextView
+            android:id="@+id/results_destinationArrival4"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_destinationArrival"
+            app:layout_constraintTop_toBottomOf="@+id/results_locationGPS4" />
+
+        <TextView
+            android:id="@+id/this_is_the_destinationArrival4"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Destination Arrival: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_locationGPS4" />
+
+        <TextView
+            android:id="@+id/results_destinationTakeoff4"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_destinationTakeoff"
+            app:layout_constraintTop_toBottomOf="@+id/results_destinationArrival4" />
+
+        <TextView
+            android:id="@+id/this_is_the_destinationTakeoff4"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Destination Takeoff: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_destinationArrival4" />
+
+        <ImageView
+            android:id="@+id/image_view_spot4"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/results_destinationTakeoff4" />
+
+        <TextView
+            android:id="@+id/spot5"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="SPOT V."
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_view_spot4" />
+
+        <TextView
+            android:id="@+id/results_date5"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_date"
+            app:layout_constraintTop_toBottomOf="@+id/spot5" />
+
+        <TextView
+            android:id="@+id/this_is_the_date5"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="Date and Time:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spot5" />
+
+        <TextView
+            android:id="@+id/results_planeType5"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_planeType"
+            app:layout_constraintTop_toBottomOf="@+id/results_date5" />
+
+        <TextView
+            android:id="@+id/this_is_the_planeType5"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Planetype: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_date5" />
+
+        <TextView
+            android:id="@+id/results_locationName5"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_locationName"
+            app:layout_constraintTop_toBottomOf="@+id/results_planeType5" />
+
+        <TextView
+            android:id="@+id/this_is_the_locationName5"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Location Name: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_planeType5" />
+
+        <TextView
+            android:id="@+id/results_locationGPS5"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_locationGPS"
+            app:layout_constraintTop_toBottomOf="@+id/results_locationName5" />
+
+        <TextView
+            android:id="@+id/this_is_the_locationGPS5"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Location GPS: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_locationName5" />
+
+        <TextView
+            android:id="@+id/results_destinationArrival5"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_destinationArrival"
+            app:layout_constraintTop_toBottomOf="@+id/results_locationGPS5" />
+
+        <TextView
+            android:id="@+id/this_is_the_destinationArrival5"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Destination Arrival: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_locationGPS5" />
+
+        <TextView
+            android:id="@+id/results_destinationTakeoff5"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/this_is_the_destinationTakeoff"
+            app:layout_constraintTop_toBottomOf="@+id/results_destinationArrival5" />
+
+        <TextView
+            android:id="@+id/this_is_the_destinationTakeoff5"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Destination Takeoff: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/this_is_the_destinationArrival5" />
+
+        <ImageView
+            android:id="@+id/image_view_spot5"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/results_destinationTakeoff5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="828dp"
+        tools:context=".PlanesActivity">
+
+        <TextView
+            android:id="@+id/add_spot"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:text="CAPTURE SPOT"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/insert_destination_arrival"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="Destination (Arrival)"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/insert_plane_type" />
+
+        <EditText
+            android:id="@+id/insert_destination_takeoff"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="Destination (Take off)"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/insert_destination_arrival" />
+
+        <EditText
+            android:id="@+id/insert_plane_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Plane Type"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_spot" />
+
+        <Button
+            android:id="@+id/submit_planes_activity"
+            android:layout_width="63dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="4dp"
+            android:background="#00A1E4"
+            android:layout_marginLeft="31dp"
+            android:layout_marginRight="4dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="Submit to spot I."
+            android:textColor="#FFFFFF"
+            android:textSize="9sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progress_bar" />
+
+        <Button
+            android:id="@+id/submit_planes_activity2"
+            android:layout_width="63dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="4dp"
+            android:background="#00A1E4"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="Submit to spot II."
+            android:textColor="#FFFFFF"
+            android:textSize="9sp"
+            app:layout_constraintStart_toEndOf="@+id/submit_planes_activity"
+            app:layout_constraintTop_toBottomOf="@+id/progress_bar" />
+
+        <Button
+            android:id="@+id/submit_planes_activity3"
+            android:layout_width="63dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="4dp"
+            android:background="#00A1E4"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="Submit to spot III."
+            android:textColor="#FFFFFF"
+            android:textSize="9sp"
+            app:layout_constraintStart_toEndOf="@+id/submit_planes_activity2"
+            app:layout_constraintTop_toBottomOf="@+id/progress_bar" />
+
+        <Button
+            android:id="@+id/submit_planes_activity4"
+            android:layout_width="63dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="4dp"
+            android:background="#00A1E4"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="Submit to spot IV."
+            android:textColor="#FFFFFF"
+            android:textSize="9sp"
+            app:layout_constraintStart_toEndOf="@+id/submit_planes_activity3"
+            app:layout_constraintTop_toBottomOf="@+id/progress_bar" />
+
+        <Button
+            android:id="@+id/submit_planes_activity5"
+            android:layout_width="63dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="4dp"
+            android:background="#00A1E4"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="40dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="Submit to spot V."
+            android:textColor="#FFFFFF"
+            android:textSize="9sp"
+            app:layout_constraintStart_toEndOf="@+id/submit_planes_activity4"
+            app:layout_constraintTop_toBottomOf="@+id/progress_bar" />
+
+        <Button
+            android:id="@id/button_timepicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="date and time"
+            app:layout_constraintBottom_toTopOf="@+id/button_choose_image"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/insert_location_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="4dp"
+            android:ems="10"
+            android:hint="Location (Name)"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/insert_location_gpscode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/insert_destination_takeoff" />
+
+        <EditText
+            android:id="@+id/insert_location_gpscode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="Location (GPS-Code)"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/insert_destination_takeoff" />
+
+        <TextView
+            android:id="@+id/insert_time"
+            android:layout_width="250dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:hint=" WILL APPEAR HERE"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.368"
+            app:layout_constraintStart_toEndOf="@+id/button_timepicker"
+            app:layout_constraintTop_toBottomOf="@+id/insert_location_gpscode"
+            tools:text="@tools:sample/date/ddmmyy" />
+
+        <Button
+            android:id="@+id/button_choose_image"
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Choose file"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/insert_time" />
+
+        <!--Button
+            android:id="@+id/button_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Upload"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_view" /-->
+
+        <EditText
+            android:id="@+id/insert_file_name"
+            android:layout_width="246dp"
+            android:layout_height="49dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="Enter spot number (1-5)"
+            android:inputType="number"
+            android:maxLength="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/button_choose_image"
+            app:layout_constraintTop_toBottomOf="@+id/insert_time" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_show_uploads" />
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/insert_file_name" />
+
+        <TextView
+            android:id="@+id/text_view_show_uploads"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Please fill in the textboxes, date, time and choose a file to be able to submit and save your input data. The app will automatically close after submitting to store your data."
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

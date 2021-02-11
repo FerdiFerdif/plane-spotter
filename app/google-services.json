@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "299995568015",
+    "project_id": "plane-spotter-dacd4",
+    "storage_bucket": "plane-spotter-dacd4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:299995568015:android:345cb70643485eb5e31dfa",
+        "android_client_info": {
+          "package_name": "com.example.planespotter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "299995568015-jfrnole1a2odlgegpc73cjosej71chnk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.planespotter",
+            "certificate_hash": "c4cf6f383e4a098bf1d441d5aafe6de07b7f236c"
+          }
+        },
+        {
+          "client_id": "299995568015-s8nmlhq1d2tt2s9esc8a9evs5bdpnnrm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC26sbMaclDpHs0N40z2RUsyF8QscH9vQ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "299995568015-s8nmlhq1d2tt2s9esc8a9evs5bdpnnrm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
