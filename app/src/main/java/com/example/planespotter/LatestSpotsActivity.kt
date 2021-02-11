@@ -23,6 +23,8 @@ class LatestSpotsActivity  : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.latest_spots)
 
+        //VARIABLES START
+
         val db = FirebaseFirestore.getInstance()
 
         val image_url1 = "https://firebasestorage.googleapis.com/v0/b/plane-spotter-dacd4.appspot.com/o/images%2Fspot1?alt=media&token=fe70c58b-3b23-4791-b83d-f01bbc7bf2dc"
@@ -65,6 +67,10 @@ class LatestSpotsActivity  : AppCompatActivity() {
         val locationGPS5 = findViewById(R.id.results_locationGPS5) as TextView
         val destinationTakeoff5 = findViewById(R.id.results_destinationTakeoff5) as TextView
         val destinationArrival5 = findViewById(R.id.results_destinationArrival5) as TextView
+
+        //VARIABLES END
+
+        //BUTTONS & CLICK LISTENERS START
 
         clear_spot.setOnClickListener {
 
@@ -190,6 +196,10 @@ class LatestSpotsActivity  : AppCompatActivity() {
             }
 
         }
+
+        //BUTTONS & CLICK LISTENERS END
+
+        //SEND DATA TO CLOUD FIRE STORE & STORAGE START
 
         val docRef = db.collection("spots").document("firstSpot")
         docRef.get()
@@ -437,6 +447,8 @@ class LatestSpotsActivity  : AppCompatActivity() {
             }
 
     }
+
+    //SEND DATA TO CLOUD FIRE STORE & STORAGE END
 
 }
 
