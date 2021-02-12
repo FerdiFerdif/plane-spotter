@@ -1,5 +1,7 @@
 package com.example.planespotter
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
@@ -74,126 +76,181 @@ class LatestSpotsActivity  : AppCompatActivity() {
 
         clear_spot.setOnClickListener {
 
-            if (results_date1.text.isNotEmpty() ||
-                FirebaseStorage.getInstance().reference.child("images/spot1").equals(FirebaseStorage.getInstance().reference.child("images/spot1"))) {
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("Are you sure")
+            builder.setMessage("Do you want to clear your spot?")
+            builder.setPositiveButton("Yes") { dialogInterface: DialogInterface, i: Int ->
 
-                val date = empty.text.toString()
-                val planeType = empty.text.toString()
-                val locationName = empty.text.toString()
-                val locationGPS = empty.text.toString()
-                val destinationTakeoff = empty.text.toString()
-                val destinationArrival = empty.text.toString()
+                if (results_date1.text.isNotEmpty() ||
+                    FirebaseStorage.getInstance().reference.child("images/spot1").equals(FirebaseStorage.getInstance().reference.child("images/spot1"))) {
 
-                var imageRef = FirebaseStorage.getInstance().reference.child("images/spot1")
-                imageRef.delete()
+                    val date = empty.text.toString()
+                    val planeType = empty.text.toString()
+                    val locationName = empty.text.toString()
+                    val locationGPS = empty.text.toString()
+                    val destinationTakeoff = empty.text.toString()
+                    val destinationArrival = empty.text.toString()
 
-                emptyFireStore(date, planeType, locationName, locationGPS, destinationArrival, destinationTakeoff)
+                    var imageRef = FirebaseStorage.getInstance().reference.child("images/spot1")
+                    imageRef.delete()
 
-            } else {
+                    emptyFireStore(date, planeType, locationName, locationGPS, destinationArrival, destinationTakeoff)
 
-                Toast.makeText(this@LatestSpotsActivity, "Your spot already contains no data", Toast.LENGTH_LONG).show()
+                } else {
 
+                    Toast.makeText(this@LatestSpotsActivity, "Your spot already contains no data", Toast.LENGTH_LONG).show()
+
+                }
+
+                finish()
             }
+
+            builder.setNegativeButton("No") { dialogInterface: DialogInterface, i: Int -> }
+            builder.show()
 
         }
 
         clear_spot2.setOnClickListener {
 
-            if (results_date2.text.isNotEmpty() ||
-                FirebaseStorage.getInstance().reference.child("images/spot2").equals(FirebaseStorage.getInstance().reference.child("images/spot2"))) {
+            val builder2 = AlertDialog.Builder(this)
+            builder2.setTitle("Are you sure")
+            builder2.setMessage("Do you want to clear your spot?")
+            builder2.setPositiveButton("Yes") { dialogInterface: DialogInterface, i: Int ->
 
-                val date = empty.text.toString()
-                val planeType = empty.text.toString()
-                val locationName = empty.text.toString()
-                val locationGPS = empty.text.toString()
-                val destinationTakeoff = empty.text.toString()
-                val destinationArrival = empty.text.toString()
+                if (results_date2.text.isNotEmpty() ||
+                    FirebaseStorage.getInstance().reference.child("images/spot2").equals(FirebaseStorage.getInstance().reference.child("images/spot2"))) {
 
-                var imageRef = FirebaseStorage.getInstance().reference.child("images/spot2")
-                imageRef.delete()
+                    val date = empty.text.toString()
+                    val planeType = empty.text.toString()
+                    val locationName = empty.text.toString()
+                    val locationGPS = empty.text.toString()
+                    val destinationTakeoff = empty.text.toString()
+                    val destinationArrival = empty.text.toString()
 
-                emptyFireStore2(date, planeType, locationName, locationGPS, destinationArrival, destinationTakeoff)
+                    var imageRef = FirebaseStorage.getInstance().reference.child("images/spot2")
+                    imageRef.delete()
 
-            } else {
+                    emptyFireStore2(date, planeType, locationName, locationGPS, destinationArrival, destinationTakeoff)
 
-                Toast.makeText(this@LatestSpotsActivity, "Your spot already contains no data", Toast.LENGTH_LONG).show()
+                } else {
 
+                    Toast.makeText(this@LatestSpotsActivity, "Your spot already contains no data", Toast.LENGTH_LONG).show()
+
+                }
+
+                finish()
             }
+
+            builder2.setNegativeButton("No") { dialogInterface: DialogInterface, i: Int -> }
+            builder2.show()
 
         }
 
         clear_spot3.setOnClickListener {
 
-            if (results_date3.text.isNotEmpty() ||
-                FirebaseStorage.getInstance().reference.child("images/spot3").equals(FirebaseStorage.getInstance().reference.child("images/spot3"))) {
+            val builder3 = AlertDialog.Builder(this)
+            builder3.setTitle("Are you sure")
+            builder3.setMessage("Do you want to clear your spot?")
+            builder3.setPositiveButton("Yes") { dialogInterface: DialogInterface, i: Int ->
 
-                val date = empty.text.toString()
-                val planeType = empty.text.toString()
-                val locationName = empty.text.toString()
-                val locationGPS = empty.text.toString()
-                val destinationTakeoff = empty.text.toString()
-                val destinationArrival = empty.text.toString()
+                if (results_date3.text.isNotEmpty() ||
+                    FirebaseStorage.getInstance().reference.child("images/spot3").equals(FirebaseStorage.getInstance().reference.child("images/spot3"))) {
 
-                var imageRef = FirebaseStorage.getInstance().reference.child("images/spot3")
-                imageRef.delete()
+                    val date = empty.text.toString()
+                    val planeType = empty.text.toString()
+                    val locationName = empty.text.toString()
+                    val locationGPS = empty.text.toString()
+                    val destinationTakeoff = empty.text.toString()
+                    val destinationArrival = empty.text.toString()
 
-                emptyFireStore3(date, planeType, locationName, locationGPS, destinationArrival, destinationTakeoff)
+                    var imageRef = FirebaseStorage.getInstance().reference.child("images/spot3")
+                    imageRef.delete()
 
-            } else {
+                    emptyFireStore3(date, planeType, locationName, locationGPS, destinationArrival, destinationTakeoff)
 
-                Toast.makeText(this@LatestSpotsActivity, "Your spot already contains no data", Toast.LENGTH_LONG).show()
+                } else {
 
+                    Toast.makeText(this@LatestSpotsActivity, "Your spot already contains no data", Toast.LENGTH_LONG).show()
+
+                }
+
+                finish()
             }
+
+            builder3.setNegativeButton("No") { dialogInterface: DialogInterface, i: Int -> }
+            builder3.show()
 
         }
 
         clear_spot4.setOnClickListener {
 
-            if (results_date4.text.isNotEmpty() ||
-                FirebaseStorage.getInstance().reference.child("images/spot4").equals(FirebaseStorage.getInstance().reference.child("images/spot4"))) {
+            val builder4 = AlertDialog.Builder(this)
+            builder4.setTitle("Are you sure")
+            builder4.setMessage("Do you want to clear your spot?")
+            builder4.setPositiveButton("Yes") { dialogInterface: DialogInterface, i: Int ->
 
-                val date = empty.text.toString()
-                val planeType = empty.text.toString()
-                val locationName = empty.text.toString()
-                val locationGPS = empty.text.toString()
-                val destinationTakeoff = empty.text.toString()
-                val destinationArrival = empty.text.toString()
+                if (results_date4.text.isNotEmpty() ||
+                    FirebaseStorage.getInstance().reference.child("images/spot4").equals(FirebaseStorage.getInstance().reference.child("images/spot4"))) {
 
-                var imageRef = FirebaseStorage.getInstance().reference.child("images/spot4")
-                imageRef.delete()
+                    val date = empty.text.toString()
+                    val planeType = empty.text.toString()
+                    val locationName = empty.text.toString()
+                    val locationGPS = empty.text.toString()
+                    val destinationTakeoff = empty.text.toString()
+                    val destinationArrival = empty.text.toString()
 
-                emptyFireStore4(date, planeType, locationName, locationGPS, destinationArrival, destinationTakeoff)
+                    var imageRef = FirebaseStorage.getInstance().reference.child("images/spot4")
+                    imageRef.delete()
 
-            } else {
+                    emptyFireStore4(date, planeType, locationName, locationGPS, destinationArrival, destinationTakeoff)
 
-                Toast.makeText(this@LatestSpotsActivity, "Your spot already contains no data", Toast.LENGTH_LONG).show()
+                } else {
 
+                    Toast.makeText(this@LatestSpotsActivity, "Your spot already contains no data", Toast.LENGTH_LONG).show()
+
+                }
+
+                finish()
             }
+
+            builder4.setNegativeButton("No") { dialogInterface: DialogInterface, i: Int -> }
+            builder4.show()
 
         }
 
         clear_spot5.setOnClickListener {
 
-            if (results_date5.text.isNotEmpty() ||
-                FirebaseStorage.getInstance().reference.child("images/spot5").equals(FirebaseStorage.getInstance().reference.child("images/spot5"))) {
+            val builder5 = AlertDialog.Builder(this)
+            builder5.setTitle("Are you sure")
+            builder5.setMessage("Do you want to clear your spot?")
+            builder5.setPositiveButton("Yes") { dialogInterface: DialogInterface, i: Int ->
 
-                val date = empty.text.toString()
-                val planeType = empty.text.toString()
-                val locationName = empty.text.toString()
-                val locationGPS = empty.text.toString()
-                val destinationTakeoff = empty.text.toString()
-                val destinationArrival = empty.text.toString()
+                if (results_date5.text.isNotEmpty() ||
+                    FirebaseStorage.getInstance().reference.child("images/spot5").equals(FirebaseStorage.getInstance().reference.child("images/spot5"))) {
 
-                var imageRef = FirebaseStorage.getInstance().reference.child("images/spot5")
-                imageRef.delete()
+                    val date = empty.text.toString()
+                    val planeType = empty.text.toString()
+                    val locationName = empty.text.toString()
+                    val locationGPS = empty.text.toString()
+                    val destinationTakeoff = empty.text.toString()
+                    val destinationArrival = empty.text.toString()
 
-                emptyFireStore5(date, planeType, locationName, locationGPS, destinationArrival, destinationTakeoff)
+                    var imageRef = FirebaseStorage.getInstance().reference.child("images/spot5")
+                    imageRef.delete()
 
-            } else {
+                    emptyFireStore5(date, planeType, locationName, locationGPS, destinationArrival, destinationTakeoff)
 
-                Toast.makeText(this@LatestSpotsActivity, "Your spot already contains no data", Toast.LENGTH_LONG).show()
+                } else {
 
+                    Toast.makeText(this@LatestSpotsActivity, "Your spot already contains no data", Toast.LENGTH_LONG).show()
+
+                }
+
+                finish()
             }
+
+            builder5.setNegativeButton("No") { dialogInterface: DialogInterface, i: Int -> }
+            builder5.show()
 
         }
 
