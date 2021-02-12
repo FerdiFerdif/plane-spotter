@@ -407,14 +407,14 @@ class PlanesActivity: AppCompatActivity(), DatePickerDialog.OnDateSetListener, T
             imageRef.putFile(filepath)
                     .addOnSuccessListener {p0 ->
                         pd.dismiss()
-                        Toast.makeText(applicationContext,"File Uploaded",Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(applicationContext,"File Uploaded",Toast.LENGTH_SHORT).show()
 
                         moveTaskToBack(true)
                         exitProcess(-1)
                     }
                     .addOnFailureListener {p0 ->
                         pd.dismiss()
-                        Toast.makeText(applicationContext,p0.message,Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(applicationContext,p0.message,Toast.LENGTH_SHORT).show()
                     }
                     .addOnProgressListener {p0 ->
                         var progress = (100.0 * p0.bytesTransferred) / p0.totalByteCount
