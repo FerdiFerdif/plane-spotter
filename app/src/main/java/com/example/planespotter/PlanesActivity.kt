@@ -475,7 +475,7 @@ class PlanesActivity: AppCompatActivity(), DatePickerDialog.OnDateSetListener, T
 
     override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
         savedDay = dayOfMonth
-        savedMonth = month
+        savedMonth = month + 1
         savedYear = year
 
         getDateTimeCalender()
