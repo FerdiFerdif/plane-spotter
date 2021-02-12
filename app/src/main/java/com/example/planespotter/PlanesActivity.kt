@@ -263,6 +263,7 @@ class PlanesActivity: AppCompatActivity(), DatePickerDialog.OnDateSetListener, T
                 Toast.makeText(this@PlanesActivity, "Enter a spot number (1-5) to be able to upload your file", Toast.LENGTH_LONG).show()
 
             }
+
         }*/
 
         //BUTTONS & CLICK LISTENERS END.
@@ -414,7 +415,7 @@ class PlanesActivity: AppCompatActivity(), DatePickerDialog.OnDateSetListener, T
                     }
                     .addOnFailureListener {p0 ->
                         pd.dismiss()
-                        //Toast.makeText(applicationContext,p0.message,Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(applicationContext,"Failed To Upload File",Toast.LENGTH_SHORT).show()
                     }
                     .addOnProgressListener {p0 ->
                         var progress = (100.0 * p0.bytesTransferred) / p0.totalByteCount
