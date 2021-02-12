@@ -266,7 +266,7 @@ class PlanesActivity: AppCompatActivity(), DatePickerDialog.OnDateSetListener, T
 
         }*/
 
-        //BUTTONS & CLICK LISTENERS END.
+        //BUTTONS & CLICK LISTENERS END
 
     }
 
